@@ -82,11 +82,12 @@ header ul li a {
 	font-weight: 800;
 }
 
+/* button "learn more" */
 .content .title-box a {
 	display: inline-block;
 	margin-top: 20px;
-	padding: 8px 20px;
-	font-size: 0.8em;
+	padding: 10px 25px;
+	font-size: 0.9em;
 	background-color: #017143;
 	color: #fff;
 	border-radius: 40px;
