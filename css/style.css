@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 /* general design*/
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +17,18 @@
 	--black2: #333;
 }
 
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:var(--white);
+}
+
+/* dark mode */
 .dark {
 	--black: #fff;
 	--white: #113828;
@@ -44,17 +57,6 @@
 
 .themeSwitch.active::before {
 		content: '\f185';
-}
-
-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color:var(--white);
 }
 
 /* header styles */
@@ -95,6 +97,7 @@ header ul li a {
 header ul li a:hover {
 	opacity: 0.8;
 }
+
 /* content styling */
 
 .content {
@@ -131,7 +134,7 @@ header ul li a:hover {
 
 .content .title-box a {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 25px;
   padding: 10px 25px;
   font-size: 0.9em;
   background-color: var(--green);
@@ -224,7 +227,7 @@ header ul li a:hover {
 
 @media (max-width: 991px) {
   section {
-    padding: 20px 20px 170px;
+    padding: 20px 40px 170px;
   }
 
   header {
