@@ -13,3 +13,10 @@ function toggleMenu(){
 	menuToggle.classList.toggle('active');
 	navigation.classList.toggle('active');
 }
+
+	const themeSwitch = document.querySelector('.themeSwitch');
+	const body = document.querySelector('body');
+	themeSwitch.onclick = function () {
+    themeSwitch.classList.toggle('active');
+    body.classList.toggle('dark');
+};

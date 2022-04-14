@@ -8,6 +8,44 @@
   font-family: 'Poppins', sans-serif;
 }
 
+:root {
+	--black: #333;
+	--green: #017143;
+	--white: #fff;
+	--white2: #fff;
+	--black2: #333;
+}
+
+.dark {
+	--black: #fff;
+	--white: #113828;
+	--black2: #124e36;
+}
+
+.themeSwitch {
+	position: relative;
+	background-color: var(--black);
+	margin: 0 0 0 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.themeSwitch::before {
+	content: '\f186';
+	font-family: fontAwesome;
+  color:var(--white);
+	font-size: 20px;
+}
+
+.themeSwitch.active::before {
+		content: '\f185';
+}
+
 section {
   position: relative;
   width: 100%;
@@ -16,7 +54,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color:var(--white);
 }
 
 /* header styles */
@@ -48,7 +86,7 @@ header ul li {
 
 header ul li a {
   display: inline-block;
-  color: #333;
+  color: var(--black);
   font-weight: 400;
   margin-left: 40px;
   text-decoration: none;
@@ -73,16 +111,20 @@ header ul li a:hover {
 }
 
 .content .title-box h2 {
-  color: #333;
+  color: var(--black);
   font-size: 4em;
   line-height: 1.4em;
   font-weight: 500;
 }
 
 .content .title-box h2 span {
-  color: #017143;
+  color: var(--green);
   font-size: 1.2em;
   font-weight: 800;
+}
+
+.dark .content .title-box h2 span {
+  color: #00ff9b;
 }
 
 /* button "learn more" */
@@ -92,8 +134,8 @@ header ul li a:hover {
   margin-top: 20px;
   padding: 10px 25px;
   font-size: 0.9em;
-  background-color: #017143;
-  color: #fff;
+  background-color: var(--green);
+  color: var(--white2);
   border-radius: 40px;
   text-decoration: none;
   letter-spacing: 1px;
@@ -170,7 +212,7 @@ header ul li a:hover {
 
 .circle {
   position: absolute;
-  background-color: #017143;
+  background-color: var(--green);
   top: 0;
   left: 0;
   width: 100%;
@@ -200,11 +242,11 @@ header ul li a:hover {
   header ul li a {
     font-size: 1.5em;
     margin: 10px;
-    color: black;
+    color: var(--black);
   }
 
   header ul li a:hover {
-    color: #333;
+    color: var(--black);
   }
 
   .toggle {
@@ -238,7 +280,7 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--white);
     opacity: 70%;
     z-index: 1;
   }
@@ -276,9 +318,13 @@ header ul li a:hover {
   }
 
   .social-media {
-    background-color: #017143;
+    background-color: var(--green);
     right: 0;
     border-radius: 5px;
     padding: 5px;
   }
+
+	.dark .social-media {
+		background-color: var(	--white);
+	}
 }
